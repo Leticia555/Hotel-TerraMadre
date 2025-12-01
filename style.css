@@ -50,17 +50,16 @@ header {
     width: 100%;
     background-color: #7c5c49;
     z-index: 99999;
-    position: relative; /* corrigido */
-}
+    position: relative; }
 
-/* LOGO */
+
 .logo {
     height: 80px;
     margin: 0;
     object-fit: contain; 
 }
 
-/* NAV */
+
 nav ul {
     display: flex;
     gap: 20px;
@@ -119,7 +118,7 @@ nav ul li {
     
 }
 
-/* CARD */
+
 .card {
     width: 32%;
     background: #f9f6f2;
@@ -235,7 +234,7 @@ p {
 
 .container{
   width: 90%; 
-  margin: 0 auto; /* Centraliza o container */
+  margin: 0 auto; 
   padding: 20px; 
   
   background-color: #efeae3;
@@ -356,3 +355,4 @@ footer.rodado {
     margin: 0;
 
 }
+
