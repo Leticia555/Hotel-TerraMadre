@@ -1,0 +1,357 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  RESPONSIVIDADE */
+
+/* Telas: tablets*/
+@media (max-width: 900px) {
+    .card {
+        width: 48%;
+    }
+
+    .card img {
+        height: 200px;
+    }
+}
+
+/* Telas: celulares */
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+
+    .card img {
+        height: 190px;
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #efeae3;
+    font-family: "Coco Gothic", sans-serif;
+    margin: 0;
+    padding: 0%;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    width: 100%;
+    background-color: #7c5c49;
+    z-index: 99999;
+    position: relative; /* corrigido */
+}
+
+/* LOGO */
+.logo {
+    height: 80px;
+    margin: 0;
+    object-fit: contain; /* mantém proporção */
+}
+
+/* NAV */
+nav ul {
+    display: flex;
+    gap: 20px; /* espaço entre itens */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+.nav-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #efeae3;
+    padding: 5px 10px;
+}
+
+
+.nav-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #efeae3;
+    padding: 5px 10px;
+     
+}
+
+
+.nav-link:hover {
+    color: black;
+}
+
+
+.img1 {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.img {
+    height: 100%;
+    display: block;
+    position: relative;
+}
+
+
+.quartos-container {
+    width: 95%;
+    max-width: 1300px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 35px 10px;
+    
+}
+
+/* CARD */
+.card {
+    width: 32%;
+    background: #f9f6f2;
+    border: 1px solid #452509;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background-color: #efeae3;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+}
+
+p {
+  font-weight: 700; /* Torna o texto do parágrafo mais grosso */
+}
+
+/* IMAGEM */
+.card img {
+    width: 100%;
+    height: 230px;
+    transition: transform 0.4s ease;
+}
+
+/* ZOOM NA IMAGEM NO HOVER */
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* TEXTO DO CARD */
+.card-escrita {
+    padding: 18px 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.escrita {
+    font-size: 13px;
+    color: #452509;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card-info h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #452509;
+    margin-bottom: 14px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.preco {
+    font-size: 15px;
+    color: #452509;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.beneficios {
+    background-image: url('./img/lazer.webp'); 
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    position: relative;
+}
+
+/* FILTRO ESCURO NA IMAGEM */
+.beneficios::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(60, 35, 20, 0.55); /* marrom escuro transparente */
+    z-index: 0;
+}
+
+/* CAIXAS */
+.beneficio-item {
+    width: 350px;
+    height: 340px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    z-index: 1; /* sobe acima do filtro escuro */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* ÍCONES */
+.beneficio-icon {
+    width: 90px;
+    height: 90px;
+    margin-left: 92px;
+}
+
+/* TEXTO */
+.beneficio-item h3 {
+    color: #efeae3;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.container{
+  width: 90%; /* Ou max-width: 1200px; */
+  margin: 0 auto; /* Centraliza o container */
+  padding: 20px; /* Espaçamento interno */
+  
+  background-color: #efeae3; /* Opcional: para visualizar o container */
+}
+
+.texto{
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding: 30px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+
+
+.parallax{ 
+/*Efeito Parallax é uma técnica de design onde os elementos de fundo se movem a uma velocidade diferente dos elementos de primeiro plano, criando uma sensação de profundidade ao rolar a página. Esse efeito é muito comum em sites modernos para dar um toque dinâmico*/
+background-attachment: fixed;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.p1{
+    background-image: url(./img/piscina-pool.jpg);
+}
+
+.section4{
+    background-color: #7e5d4a;
+    width: 100%;
+    height: 100%;
+   
+}
+
+.logo{
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 50px;
+    width: 20%;
+    
+}
+
+.logo1{
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 50px;
+    width: 160%;
+    
+}
+
+footer.rodado {
+    background-color: #7c5c49;
+    width: 100%;
+    padding: 40px 0;
+    color: #fff;
+}
+
+/* PRIMEIRA PARTE DO FOOTER – IMAGEM + LOGO */
+.section4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.section4 img {
+    max-width: 100%;
+    height: auto;
+    
+}
+
+
+.piscina-pool{
+    width: 130%;
+}
+
+.div{
+    width: 100%;
+}
+
+/* CAIXA "RESERVE JÁ" */
+.pe {
+    width: 350px;
+    margin: 40px auto 0 auto; /* CENTRALIZA */
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding: 20px;
+    background-color: #7c5c49;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* TEXTO CENTRAL */
+.centro {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* TEXTO DO TELEFONE */
+.texto3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    margin: 0;
+}
